@@ -1,0 +1,2 @@
+class Uslugi < ApplicationRecord
+end

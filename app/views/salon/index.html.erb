@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="header">
+      <h1> Вам нужна Спецтехника? Мы готовы предоставить 24/7</h1>
+      <%= image_tag('telefon', class: 'tel' ) %>
+      <%= image_tag('viber', class: 'tel' ) %>
+      <%= image_tag('whatsapp', class: 'tel' ) %>
+        <h4>+7 985 348 6666</h4>,
+        <h4>+7 985 850 23 63</h4>
+      <%= image_tag('email', class: 'tel1' ) %>
+      <h4>spectexniks.makaryan@ya.ru/<h4>
+    </div>
+   <%= render "pages/navbar" %>
+    <div class="line"></div>
+    <div class="reklamma">
+      <h4>АРЕНДА  СПЕЦТЕХНИКИ В МОСКВЕ И МОСКОВСКОЙ ОБЛАСТИ</h4>
+      <p>Компания предлагает аренду спецтехники широкого назначения в Москве и Московской области для осуществления строительных, дорожно-ремонтных,демонтажных работ. Кроме того, выполняем дорожно-строительные, грунтовые, земляные и уборочные работы любого уровня сложности. Любая единица спецтехники стоит недешево, и поэтому сложно иметь в собственности все ее виды. Вот почему аренда является востребованной услугой в Москве и Московской области.</p>
+    </div>
+    <div class="container-fluid color">
+      <div class="row">
+        <div class="catalog"><h3>Каталог спецтехники</h3></div>
+        <% @products.each do |product| %>
+          <div class="col-md-3 page">
+            <div class="bordert">
+             <p><%= image_tag(product.image_url, class: 'image1')	%></p>
+              <div class="title"><%= product.title %></div>
+             </div>
+          </div>
+        <%	end  %>
+      </div>
+    </div>
+    <div class="rek">
+      <h3>Преимущество аренды спецтехники у Нас</h3>
+      <div class="linia"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <% @icons.each do |icon| %>
+          <div class="col-md-3">
+            <div class="border1">
+            <p><%= image_tag(icon.image_url, class: 'image2')%></p>
+              <div class="title1"><%= icon.description %></div>
+            </div>
+          </div>
+        <%	end  %>
+      </div>
+    </div>
+
+ <div class="footer">
+          <p>©2023 Москва | Все права защищены | Политика обработки персональных данных</p>
+      </div>
+  </div>
+</div>

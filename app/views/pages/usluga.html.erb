@@ -1,0 +1,14 @@
+<%= render "pages/navbar" %>
+<div class="oplata">
+  <h1>Наши услуги</h1>
+  <div class="container">
+    <div class="row">
+      <% @uslugis.each do |uslugi| %>
+        <div class="col-md-4">
+            <p><%= image_tag(uslugi.image_url, class: 'image3')%></p>
+            <div class="title2"><%= uslugi.description %></div>
+          </div>
+      <%	end  %>
+  </div>
+ </div>
+</div>

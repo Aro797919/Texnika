@@ -1,0 +1,360 @@
+@import "bootstrap";
+/*
+ *= require jquery-ui
+ */
+.title{
+  text-align: center;
+  font-family: "Helvetica Neue";
+}
+.products {
+  table {
+    border-collapse: collapse;
+  }
+  table tr td {
+    padding: 5px;
+    vertical-align: top;
+  }
+  .list_image {
+      width: 60px ;
+      height: 70px;
+  }
+  .list_descriptions {
+    width: 60%;
+    dl{
+      margin: 0;
+    }
+    dt{
+      color: #244;
+      font-weight: bold;
+      font-size: larger;
+    }
+    dd {
+      margin: 0;
+    }
+    .list_actions {
+      font-size: x-small;
+      text-align: right;
+      padding-left: 1em;
+    }
+    .list_line_events {
+      background: #e0f8f8;
+    }
+    .list_line_odd {
+      background: #f8b0f8;
+    }
+  }
+}
+.header {
+  padding: 10px; /* some padding */
+  text-align: center; /* center the text */
+  background: #f57542; /* green background */
+  color: white; /* white text color */
+}
+.header h4 {
+  display: inline;
+  font-family: "Noto Sans Old Italic";
+  margin-left: 15px;
+}
+
+/* Increase the font size of the <h1> element */
+.header h1 {
+  font-size: 40px;
+  font-family: Ti;
+  -webkit-animation: blink 2s linear infinite;
+  animation: blink 2s linear infinite;
+  font-weight: bold;
+  color: #F00;
+}
+
+@-webkit-keyframes blink {
+  0% { color: #F00; }
+  50% { color: #FBB; }
+  100% { color: #F00; }
+}
+
+@keyframes blink {
+  0% { color: #F00; }
+  50% { color: #FBB; }
+  100% { color: blue; }
+}
+/* Style the top navigation bar */
+.navbar-nav{
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Style the navigation bar links */
+.navbar-nav a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: black; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 10px 10px; /* Add some padding */
+  /* Remove underline */
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  /* background-color: white; /* Grey background color */
+  color: black; /* Black text color */
+}
+/* Column container */
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  background-color: #E2F1B3;
+  float: left;
+
+}
+
+/* Main column */
+.main {
+  background-color: blueviolet; /* White background color */
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+.footer { /* Some padding */
+  padding: 10px;
+  text-align: center; /* Center text*/
+  background: #ddd; /* Grey background */
+  margin-top: 40px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+.main {
+  height:438px;
+}
+.d-block {
+  height: 440px;
+}
+.nav-link{
+  margin-left: 110px;
+ color: #2E2F30;
+}
+.navbar-nav a{
+  font-family: "Helvetica Neue";
+}
+.uslugi{
+  background: #E0D9CD;
+  height: 100vh;
+  h1{
+    text-align: center;
+    color: #C26F60;
+  }
+  h4{
+    margin-left: 50px;
+    font-family: "Fira Code Retina";
+  }
+}
+.image1{
+  width: 240px;
+  height: 200px;
+  text-align: center;
+  background-color: #730E15;
+}
+.title {
+   color: #000080;
+   letter-spacing: 1px;
+   font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 0px;
+  font-family: ProtoSans56 ;
+  src: url(assets/fonts/)
+ }
+.main1{
+  margin-top:650px;
+}
+.bordert {
+  margin-left: 35px;
+  margin-top: 10px;
+  width: 250px;
+  height: 250px;
+  border: thick double #555c5b;
+}
+.line {
+  border-bottom: 2px solid #730E15;
+}
+.reklamma p {
+  font-size: 18px;
+  text-align: center;
+  font-family: "Arial Narrow";
+}
+.reklamma h4 {
+  text-align: center;
+  color: #730E15;
+  margin-top: 20px;
+}
+.reklamma p {
+  margin-left: 20px;
+  margin-right: 20px;
+  text-indent: 3ch;
+  margin: 0px;
+  @font-face {
+  font-family: 'Evgenia Deco';
+  src: url('assets/fonts/evgenia_deco.eot'); /* IE 9 Compatibility Mode */
+  src: url('assets/fonts/evgenia_deco.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+  url('assets/fonts/evgenia_deco.woff2') format('woff2'), /* Super Modern Browsers */
+  url('assets/fonts/evgenia_deco.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+  url('assets/fonts/evgenia_deco.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('assets/fonts/evgenia_deco.svg#evgenia_deco') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+}
+.rek h3 {
+  font-family: "Helvetica Neue" ;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+}
+.image2 {
+  height: 62px;
+  margin-bottom: 12px;
+}
+.border1 {
+  height: 250px;
+  width: 250px;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.border1 p {
+  text-align: center;
+}
+.title1 {
+  margin-top: 0;
+  font-size: 20px;
+  font-family: "Arial Narrow";
+  text-align: center;
+}
+
+.border p {
+  text-align: center;
+}
+.tel {
+  width: 50px;
+  height: 50px;
+  display: inline;
+}
+body {
+  background-color: #f5f0e0;
+}
+.logo {
+ width: 120px;
+  height: 48px;
+  margin-left: 40px;
+  border: 2px solid  #555c5b;
+
+}
+.tel1 {
+  width: 50px;
+  height: 50px;
+  display: inline;
+  margin-left: 30px;
+}
+.logo1 {
+  width: 100px;
+  height: 60px;
+  margin-left: 0px;
+  background-color: #42f599;;
+}
+.catalog h3 {
+  margin-left: 30px;
+  margin-top: 30px;
+  display: inline;
+  border-bottom: 3px solid #f9dd94;
+}
+.page {
+  margin-top: 30px !important
+}
+.oplata h3 {
+  text-align: center;
+}
+.oplata {
+  background: #E0D9CD;
+  height: 100vh;
+  h1 {
+    display: inline;
+    border-bottom: 3px solid #f9dd94;
+    color: #C26F60;
+    margin-left: 30px;
+  }
+  h4 {
+    text-align: center;
+    border-bottom: 3px solid #a83254;
+  }
+  p {
+    font-family: ProtoSans56;
+    src: font-url('protosans56.ttf');
+    font-size: 18px;
+    margin: 0;
+    text-indent: 3ch;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  h3 {
+    display: inline;
+  }
+}
+.image3 {
+  height: 50px;
+  margin-top: 20px;
+}
+.title2{
+  font-size: 15px;
+  font-family: ProtoSans56;
+  src: font-url('protosans56.ttf');
+  margin-top: 10px;
+  border-bottom: 3px solid #a83254
+}
+.gray{
+  background-image:url(image/nal.png);
+}
+.linia {
+  border-bottom: 3px solid #f9dd94;
+  margin-top: 20px;
+  margin-left: 300px;
+  width: 720px;
+}
+.oplata1 {
+  height: 62px;
+  margin-top: 40px;
+}
+.color {
+  margin-top: 50px;
+}
+.karta {
+  width: 50px;
+  height:50px;
+}

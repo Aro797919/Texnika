@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Uslugis</h1>
+div id="user_nav">
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>
+  <%= link_to 'Edit', edit_user_registration_path %>
+  <%= link_to 'Logout',destroy_user_session_path, method: :delete, data: {confirm: 'Вы уверены ?'} %>
+<% else %>
+  <%= link_to 'Sig in', new_user_registration_path %>
+  <%= link_to 'Login', new_user_session_path %>
+<% end %>
+</div>
+<div id="uslugis">
+  <% @uslugis.each do |uslugi| %>
+    <%= render uslugi %>
+    <p>
+      <%= link_to "Show this uslugi", uslugi %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New uslugi", new_uslugi_path %>

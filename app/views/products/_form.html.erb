@@ -1,0 +1,34 @@
+<div class="row justify-content-md-center">
+  <div class="col-md-6">
+    <%= form_with(model: product) do |form| %>
+      <% if product.errors.any? %>
+        <div style="color: red">
+          <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+          <ul>
+            <% product.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= form.text_field :title, class: 'form-control', placeholder: 'Наименование' %>
+      </div>
+      <br>
+      <div class="form-group">
+        <%= form.text_area :description, class: 'form-control', placeholder: 'Описание' %>
+      </div>
+      <br>
+      <div class="form-group">
+        <%= form.text_field :image_url, class: 'form-control', placeholder: 'Изображение' %>
+      </div>
+      <br>
+      <div>
+        <%= form.submit "Добавить", class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
