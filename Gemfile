@@ -9,7 +9,7 @@ gem 'bootstrap'
 gem 'jquery-ui-rails'
 gem 'jquery-rails'
 gem "devise"
-
+gem "dotenv"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -78,5 +78,5 @@ group :test do
   gem "webdrivers"
 end
 group :production do
-  gem "pg"
+  gem "sqlite3", "~> 1.4"
 end
