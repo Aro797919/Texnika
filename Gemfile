@@ -78,5 +78,5 @@ group :test do
   gem "webdrivers"
 end
 group :production do
-  gem "sqlite3", "~> 1.4"
+  gem "pg"
 end
